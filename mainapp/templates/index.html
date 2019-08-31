@@ -1,76 +1,68 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>interior</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="/static/css/animate.css">
-	<link rel="stylesheet" href="/static/css/style.css">
-  </head>
-  <body>
-  	<div class="container">
+{% extends 'base.html' %}
+{% load static %}
+
+
+<body>
+{% block menu %}
 		<div class="slider padding__site">
 			<div class="header">
-			<a class="logo wow bounceInDown" data-wow-delay="0.2s" href="#"><img src="/static/img/logo.svg" alt="logo"> </a>
+			<a class="logo wow bounceInDown" data-wow-delay="0.2s" href="{% url 'main' %}"><img src="{% static 'img/logo.svg' %}" alt="logo"> </a>
 			<ul class="menu wow bounceInDown" data-wow-delay="0.2s">
-				<li><a href="#" class="menu__link__active">HOME</a></li>
-				<li><a href="#" class="menu__link">PRODUCTS</a></li>
-				<li><a href="#" class="menu__link">HISTORY</a></li>
-				<li><a href="#" class="menu__link">SHOWROOM</a></li>
-				<li><a href="#" class="menu__link">CONTACT</a></li>
-				<li><a href="#" class="menu__link__icon"><i class="fas fa-search"></i></a></li>
+				<li><a href="{% url 'main' %}" class="menu__link__active">HOME</a></li>
+				<li><a href="{% url 'products' %}" class="menu__link">PRODUCTS</a></li>
+				<li><a href="{% url 'main' %}" class="menu__link">HISTORY</a></li>
+				<li><a href="{% url 'main' %}" class="menu__link">SHOWROOM</a></li>
+				<li><a href="{% url 'contact' %}" class="menu__link">CONTACT</a></li>
+				<li><a href="{% url 'main' %}" class="menu__link__icon"><i class="fas fa-search"></i></a></li>
 			</ul>
-			<a href="#" class="menu__mini"><i class="fas fa-bars"></i></a>
+			<a href="{% url 'main' %}" class="menu__mini"><i class="fas fa-bars"></i></a>
 			</div>
+{% endblock %}
+{% block content %}
 			<div class="slider__content wow bounceInLeft" data-wow-delay="0.9s">
 				<div class="slider__trading">TRENDING</div>
 				<h2 class="slider__h2">Fishnet Chair</h2>
 				<p class="slider__p">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black</p>
-				<a href="#" class="button">Order Us</a>
+				<a href="{% url 'main' %}" class="button">Order Us</a>
 			</div>
 			<div class="slider__pagination">
-				<a href="#" class="circle wow zoomOutUp" data-wow-delay="0.9s"></a>
-				<a href="#" class="circle_active wow zoomOutUp" data-wow-delay="0.9s"></a>
-				<a href="#" class="circle wow zoomOutUp" data-wow-delay="0.9s"></a>
+				<a href="{% url 'main' %}" class="circle wow zoomOutUp" data-wow-delay="0.9s"></a>
+				<a href="{% url 'main' %}" class="circle_active wow zoomOutUp" data-wow-delay="0.9s"></a>
+				<a href="{% url 'main' %}" class="circle wow zoomOutUp" data-wow-delay="0.9s"></a>
 			</div>
 		</div>
 <div class="featured padding__site">
 			<ul class="menu__featured">
-				<li><a href="#" class="link__featured__active">Featured</a></li>
-				<li><a href="#" class="link__featured__new">New</a></li>
+				<li><a href="{% url 'main' %}" class="link__featured__active">Featured</a></li>
+				<li><a href="{% url 'main' %}" class="link__featured__new">New</a></li>
 			</ul>
-			<a href="#" class="link__featured__explore">explore all&gt;</a>
+			<a href="{% url 'main' %}" class="link__featured__explore">explore all&gt;</a>
 		</div>
 		    <div class="product-box padding__site">
-            <div class="product wow bounce" data-wow-delay="0.0s" style="background-image: url(/static/img/product-2.png)">
+            <div class="product wow bounce" data-wow-delay="0.0s" style="background-image: url({% static 'img/product-2.png)' %}">
                 <div class="product__content">
-                    <a href="#" class="button button_product">&gt;</a>
+                    <a href="{% url 'main' %}" class="button button_product">&gt;</a>
                     <h3 class="product__h3">Fishnet Chair</h3>
                     <p class="product__text">Seat and back with upholstery made of cold cure foam</p>
                 </div>
             </div>
-            <div class="product wow bounce" data-wow-delay="0.3s" style="background-image: url(/static/img/product-2.png)">
+            <div class="product wow bounce" data-wow-delay="0.3s" style="background-image: url({% static 'img/product-2.png)' %}">
                 <div class="product__content">
-                    <a href="#" class="button button_product">&gt;</a>
+                    <a href="{% url 'main' %}" class="button button_product">&gt;</a>
                     <h3 class="product__h3">Fishnet Chair</h3>
                     <p class="product__text">Seat and back with upholstery made of cold cure foam</p>
                 </div>
             </div>
-            <div class="product wow bounce" data-wow-delay="0.6s" style="background-image: url(/static/img/product-3.png)">
+            <div class="product wow bounce" data-wow-delay="0.6s" style="background-image: url({% static 'img/product-3.png)' %}">
                 <div class="product__content">
-                    <a href="#" class="button button_product">&gt;</a>
+                    <a href="{% url 'main' %}" class="button button_product">&gt;</a>
                     <h3 class="product__h3">Fishnet Chair</h3>
                     <p class="product__text">Seat and back with upholstery made of cold cure foam</p>
                 </div>
             </div>
-            <div class="product wow bounce" data-wow-delay="0.9s" style="background-image: url(/static/img/product-4.png)">
+            <div class="product wow bounce" data-wow-delay="0.9s" style="background-image: url({% static 'img/product-4.png)' %}">
                 <div class="product__content">
-                    <a href="#" class="button button_product">&gt;</a>
+                    <a href="{% url 'main' %}" class="button button_product">&gt;</a>
                     <h3 class="product__h3">Fishnet Chair</h3>
                     <p class="product__text">Seat and back with upholstery made of cold cure foam</p>
                 </div>
@@ -78,70 +70,70 @@
         </div>
        	<div class="mini__featured">
 			<ul class="mini__menu__featured">
-				<li><a href="#" class="mini__link__featured__active">Featured</a></li>
-				<li class="mini__link__featured__new__li"><a href="#" class="mini__link__featured__new">New</a></li>
-				<li class="mini__link__featured__explore__li"><a href="#" class="mini__link__featured__explore">explore all&gt;</a></li>
+				<li><a href="{% url 'main' %}" class="mini__link__featured__active">Featured</a></li>
+				<li class="mini__link__featured__new__li"><a href="{% url 'main' %}" class="mini__link__featured__new">New</a></li>
+				<li class="mini__link__featured__explore__li"><a href="{% url 'main' %}" class="mini__link__featured__explore">explore all&gt;</a></li>
 			</ul>
 
 		</div>
 		    <div class="mini__product-box padding__site">
-            <div class="mini__product" style="background-image: url(/static/img/product-2.png)">
+            <div class="mini__product" style="background-image: url({% static 'img/product-2.png' %})">
                 <div class="mini__product__content">
-                    <a href="#" class="mini__button button_product">&gt;</a>
+                    <a href="{% url 'main' %}" class="mini__button button_product">&gt;</a>
                     <h3 class="mini__product__h3">Fishnet Chair</h3>
                     <p class="mini__product__text">Seat and back with upholstery made of cold cure foam</p>
                 </div>
             </div>
-            <div class="mini__product" style="background-image: url(/static/img/product-2.png)">
+            <div class="mini__product" style="background-image: url({% static 'img/product-2.png' %})">
                 <div class="mini__product__content">
-                    <a href="#" class="mini__button button_product">&gt;</a>
+                    <a href="{% url 'main' %}" class="mini__button button_product">&gt;</a>
                     <h3 class="mini__product__h3">Fishnet Chair</h3>
                     <p class="mini__product__text">Seat and back with upholstery made of cold cure foam</p>
                 </div>
             </div>
-            <div class="mini__product" style="background-image: url(/static/img/product-3.png)">
+            <div class="mini__product" style="background-image: url({% static 'img/product-3.png' %})}">
                 <div class="mini__product__content">
-                    <a href="#" class="mini__button button_product">&gt;</a>
+                    <a href="{% url 'main' %}" class="mini__button button_product">&gt;</a>
                     <h3 class="mini__product__h3">Fishnet Chair</h3>
                     <p class="mini__product__text">Seat and back with upholstery made of cold cure foam</p>
                 </div>
             </div>
-            <div class="mini__product" style="background-image: url(/static/img/product-4.png)">
+            <div class="mini__product" style="background-image: url({% static 'img/product-4.png' %})">
                 <div class="mini__product__content">
-                    <a href="#" class="mini__button button_product">&gt;</a>
+                    <a href="{% url 'main' %}" class="mini__button button_product">&gt;</a>
                     <h3 class="mini__product__h3">Fishnet Chair</h3>
                     <p class="mini__product__text">Seat and back with upholstery made of cold cure foam</p>
                 </div>
             </div>
         </div>
         <div class="exclusive">
-			<div class="block__ex__one wow bounceInLeft" data-wow-delay="0.2s" style="background-image: url(/static/img/promo-img1.png)">
+			<div class="block__ex__one wow bounceInLeft" data-wow-delay="0.2s" style="background-image: url({% static 'img/promo-img1.png' %})">
 				<div class="block__ex">exclusive</div>
 				<h2 class="block__ex__h2">Fishnet Chair</h2>
 				<p class="block__ex__p">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt</p>
-				<a href="#" class="button__ex">Order Us</a>
+				<a href="{% url 'main' %}" class="button__ex">Order Us</a>
 			</div>
-			<div class="block__ex__one wow bounceInRight" data-wow-delay="0.9s" style="background-image: url(/static/img/promo-img.png)">
+			<div class="block__ex__one wow bounceInRight" data-wow-delay="0.9s" style="background-image: url({% static 'img/promo-img.png' %})">
 				<div class="block__ex">exclusive</div>
 				<h2 class="block__ex__h2">Fishnet Chair</h2>
 				<p class="block__ex__p">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt</p>
-				<a href="#" class="button__ex">Order Us</a>
+				<a href="{% url 'main' %}" class="button__ex">Order Us</a>
 			</div>
 		</div>
         <div class="trending padding__site">
-			<a href="#" class="link__trending">Trending Products</a>
-			<a href="#" class="link__trending__explore">explore all&gt;</a>
+			<a href="{% url 'main' %}" class="link__trending">Trending Products</a>
+			<a href="{% url 'main' %}" class="link__trending__explore">explore all&gt;</a>
 		</div>
 		<div class="trending__products padding__site">
 			<div class="tr__pr__one">
-				<a href="#"><img class="tr__pr__pic wow shake" data-wow-delay="0.1s" src="/static/img/product-11.png" alt="tovar"></a>
-				<a href="#"><img class="tr__pr__pic wow shake" data-wow-delay="0.3s" src="/static/img/product-21.png" alt="tovar"></a>
-				<a href="#"><img class="tr__pr__pic wow shake" data-wow-delay="0.6s" src="/static/img/product-31.png" alt="tovar"></a>
+				<a href="{% url 'main' %}"><img class="tr__pr__pic wow shake" data-wow-delay="0.1s" src="{% static 'img/product-11.png' %}" alt="tovar"></a>
+				<a href="{% url 'main' %}"><img class="tr__pr__pic wow shake" data-wow-delay="0.3s" src="{% static 'img/product-21.png' %}" alt="tovar"></a>
+				<a href="{% url 'main' %}"><img class="tr__pr__pic wow shake" data-wow-delay="0.6s" src="{% static 'img/product-31.png' %}" alt="tovar"></a>
 			</div>
 			<div class="tr__pr__two">
-				<a href="#"><img class="tr__pr__pic wow shake" data-wow-delay="0.6s" src="/static/img/product-41.png" alt="tovar"></a>
-				<a href="#"><img class="tr__pr__pic wow shake" data-wow-delay="0.3s" src="/static/img/product-5.png" alt="tovar"></a>
-				<a href="#"><img class="tr__pr__pic wow shake" data-wow-delay="0.1s" src="/static/img/product-6.png" alt="tovar"></a>
+				<a href="{% url 'main' %}"><img class="tr__pr__pic wow shake" data-wow-delay="0.6s" src="{% static 'img/product-41.png' %}" alt="tovar"></a>
+				<a href="{% url 'main' %}"><img class="tr__pr__pic wow shake" data-wow-delay="0.3s" src="{% static 'img/product-5.png' %}" alt="tovar"></a>
+				<a href="{% url 'main' %}"><img class="tr__pr__pic wow shake" data-wow-delay="0.1s" src="{% static 'img/product-6.png' %}" alt="tovar"></a>
 			</div>
 		</div>
 		<div class="slider__hot__padding">
@@ -150,107 +142,33 @@
 				<div class="slider__hot__trading">Hot deal</div>
 				<h2 class="slider__hot__h2">Fishnet Chair</h2>
 				<p class="slider__hot__p">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black</p>
-				<a href="#" class="button">Order Us</a>
+				<a href="{% url 'main' %}" class="button">Order Us</a>
 			</div>
 			<div class="slider__pagination">
-				<a href="#" class="circle wow zoomOutUp" data-wow-delay="0.9s"></a>
-				<a href="#" class="circle_active wow zoomOutUp" data-wow-delay="0.9s"></a>
-				<a href="#" class="circle wow zoomOutUp" data-wow-delay="0.9s"></a>
+				<a href="{% url 'main' %}" class="circle wow zoomOutUp" data-wow-delay="0.9s"></a>
+				<a href="{% url 'main' %}" class="circle_active wow zoomOutUp" data-wow-delay="0.9s"></a>
+				<a href="{% url 'main' %}" class="circle wow zoomOutUp" data-wow-delay="0.9s"></a>
 			</div>
 		</div>
 		</div>
 		<div class="block__ex__all">
-			<div class="block__ex__ex wow rollOut" data-wow-delay="0.3s" style="background-image: url(/static/img/product-1-lg.png);">
+			<div class="block__ex__ex wow rollOut" data-wow-delay="0.3s" style="background-image: url({% static 'img/product-1-lg.png' %})">
 				<div class="block__ex__mini">exclusive</div>
 				<h2 class="block__ex__h2__mini">Fishnet Chair</h2>
 				<p class="block__ex__p__mini">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt</p>
-				<a href="#" class="button__ex">Order Us</a>
+				<a href="{% url 'main' %}" class="button__ex">Order Us</a>
 			</div>
 			<div class="mini__catalog__ex">
 				<div class="catalog__one">
-					<a href="#"><img class="tr__pr__pic__ex wow rollOut" data-wow-delay="0.3s" src="/static/img/product-2-sm.png" alt="tovar"></a>
-					<a href="#"><img class="tr__pr__pic__ex wow rollOut" data-wow-delay="0.3s" src="/static/img/product-3-sm.png" alt="tovar"></a>
+					<a href="{% url 'main' %}"><img class="tr__pr__pic__ex wow rollOut" data-wow-delay="0.3s" src="{% static 'img/product-2-sm.png' %}" alt="tovar"></a>
+					<a href="{% url 'main' %}"><img class="tr__pr__pic__ex wow rollOut" data-wow-delay="0.3s" src="{% static 'img/product-3-sm.png' %}" alt="tovar"></a>
 				</div>
 				<div class="catalog__two">
-					<a href="#"><img class="tr__pr__pic__ex wow rollOut" data-wow-delay="0.3s" src="/static/img/product-4-sm.png" alt="tovar"></a>
-					<a href="#"><img class="tr__pr__pic__ex wow rollOut" data-wow-delay="0.3s" src="/static/img/product-5-sm.png" alt="tovar"></a>
+					<a href="{% url 'main' %}"><img class="tr__pr__pic__ex wow rollOut" data-wow-delay="0.3s" src="{% static 'img/product-4-sm.png' %}" alt="tovar"></a>
+					<a href="{% url 'main' %}"><img class="tr__pr__pic__ex wow rollOut" data-wow-delay="0.3s" src="{% static 'img/product-5-sm.png' %}" alt="tovar"></a>
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<div class="footer__content wow bounceInLeft" data-wow-delay="0.9s">mobile app
-				<h2 class="footer__content__h2">Find. Follow.<br>Favorite.</h2>
-				<p class="footer__content__p">Save your favorites and share your style.</p>
-				<a href="#"><img src="/static/img/app-store.png" height="40" width="135" alt=""></a>
-				<a href="#"><img src="/static/img/google-play.png" height="40" width="135" alt=""></a>
-				</div>
-		</div>
-		<div class="other padding__site">
-			<div class="contacts">
-				<h2 class="contacts__h2" >Contact Us</h2>
-				<p class="contacts__p">132A Bridge Road Richmond VIC<br>Australia.</p>
-				<p class="contacts__p">Talk to us on 1300 132<br>info@interior.com</p>
-			</div>
-			<div class="useful">
-				<h2 class="useful__h2">Useful Information</h2>
-				<div class="useful__lst">
-				<div class="useful__link">
-					<ul class="other__link">
-					<li><a class="other__link__a" href="#">Sales terms</a></li>
-					<li><a class="other__link__a" href="#">Customer care</a></li>
-					<li><a class="other__link__a" href="#">Delivery</a></li>
-					</ul>
-				</div>
-				<div class="useful__link__two">
-					<ul class="other__link">
-					<li><a class="other__link__a" href="#">Architect accounts</a></li>
-					<li><a class="other__link__a" href="#">Careers</a></li>
-					<li><a class="other__link__a" href="#">Exchanges & returns</a></li>
-					</ul>
-				</div>
-				</div>
-			</div>
-			<div class="let">
-			<div class="lets">
-				<h2 class="lets__h2">Let’s Stay in Touch!</h2>
-				<p class="lets__p">Suscribe to know about our latest news, products<br>and special offers just for suscribers.</p>
-				</div>
-				<form>
-   				<div class="search">
-     				 <input type="search" name="q" placeholder="	your email address">
-     				 <input type="submit" value="">
-  				</div>
- 				</form>	
- 				</div>
-		</div>
-		<div class="footer__other">
-			<div class="copy">
-			<p class="footer__other__p">© Copyright - INTERIOR 2016. All Rights Reserved.</p>
-			</div>
-			<div class="social wow bounceInUp" data-wow-delay="0.2s">
-			<a class="social__a" href="#"><i class="fab fa-facebook-f"></i></a>
-			<a class="social__a" href="#"><i class="fab fa-twitter"></i></a>
-			<a class="social__a" href="#"><i class="fab fa-google-plus-g"></i></a>
-			<a class="social__a" href="#"><i class="fab fa-pinterest-p"></i></a>
-			</div>
-			<div class="terms">
-			<p class="footer__other__p">Terms & Conditions  /  Privacy policy & Cookies</p>
-			</div>
-		</div>
-		</div>
-
-  	<script src="/static/js/wow.min.js"></script>
-	<script>
-		new WOW().init();
-	</script>
-
-                    
-  		
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/9e16624646.js"></script>
+{% endblock %}
   </body>
 </html>
