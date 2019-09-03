@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<body>
+{% block menu %}
+		<div class="slider padding__site style=">
+			<div class="header">
+			<a class="logo wow bounceInDown" data-wow-delay="0.2s" href="{% url 'main' %}"><img src="{% static 'img/logo.svg' %}" alt="logo"> </a>
+				{% include 'includes/inc_menu.html' %}
+			<a href="{% url 'main' %}" class="menu__mini"><i class="fas fa-bars"></i></a>
+			</div>
+{% endblock %}
+{% block content %}
+
+<div class="nya" align="center">
+	<img src="{% static 'img/1517337782_giphy_2.gif' %}" width="500" height="500">
+</div>
+
+{% endblock %}
+  </body>
+</html>
